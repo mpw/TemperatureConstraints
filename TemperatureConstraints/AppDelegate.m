@@ -12,14 +12,18 @@
 
 @interface AppDelegate ()
 
-@property (weak) IBOutlet NSWindow *window;
+@property (strong) IBOutlet NSWindow *window;
+@property (strong) MethodServer *methodServer;
 @end
 
 @implementation AppDelegate
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification {
-    [[MethodServer alloc] initWithMethodDictName:@"temperatureconstraints"];
+    [self setMethodServer:[[[MethodServer alloc] initWithMethodDictName:@"temperatureconstraints"] autorelease]];
+    [[self methodServer] setupWithoutStarting];
+    [self setupDeltablueConstraints];
 }
+
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application

@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class MethodServer;
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
     IBOutlet NSTextField *celsiusTextField;
