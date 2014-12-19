@@ -39,7 +39,6 @@ c2k add1ArgBlock:[ :karg | karg  - 473 . ].
 (c2f variableAtIndex:0) externalReference startObserving.
 (c2f variableAtIndex:1) externalReference startObserving.
 
-stdout println:'started watching'.
 
 </string>
 			</dict>
