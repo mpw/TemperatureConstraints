@@ -18,9 +18,19 @@
 
 @implementation AppDelegate
 
+-interpreter
+{
+    return [[self methodServer] interpreter];
+}
+
+
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification {
     [self setMethodServer:[[[MethodServer alloc] initWithMethodDictName:@"temperatureconstraints"] autorelease]];
     [[self methodServer] setupWithoutStarting];
+    [[self interpreter] bindValue:self toVariableNamed:@"delegate"];
+    [[self interpreter] evaluateScriptString:@"scheme:ivar := ref:var:delegate asScheme."];
+    NSLog(@"will setupDeltablueConstraints");
+    
     [self setupDeltablueConstraints];
 }
 

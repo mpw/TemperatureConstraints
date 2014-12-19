@@ -15,6 +15,7 @@
     IBOutlet NSTextField *celsiusTextField;
     IBOutlet NSTextField *fahrenheitTextField;
     IBOutlet NSTextField *kelvinTextField;
+    id solver;
 }
 
 

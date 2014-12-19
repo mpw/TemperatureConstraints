@@ -25,7 +25,7 @@ stdout println: ivar:celsiusTextField class.
 stdout println: solver.
 
 
-ivar:celsiusTextField/intValue := defaults:celsius.
+ivar:celsiusTextField/intValue := 0.
 
 
 c2f := [  ivar:fahrenheitTextField/intValue := (9.0/5.0)* ivar:celsiusTextField/intValue + 32 ] constraintIn:solver.
