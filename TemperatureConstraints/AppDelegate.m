@@ -8,15 +8,22 @@
 
 #import "AppDelegate.h"
 #import <MethodServer/MethodServer.h>
-
+#import <MPWFoundation/MPWFoundation.h>
 
 @interface AppDelegate ()
 
 @property (strong) IBOutlet NSWindow *window;
-@property (strong) MethodServer *methodServer;
+
 @end
 
 @implementation AppDelegate
+
+
+idAccessor(solver, setSolver)
+objectAccessor(NSTextField, celsiusTextField, setCelsiusTextField )
+objectAccessor(NSTextField, fahrenheitTextField, setFahrenheitTextField )
+objectAccessor(NSTextField, kelvinTextField, setKelvinTextField )
+objectAccessor(MethodServer, methodServer, setMethodServer)
 
 -interpreter
 {
@@ -44,3 +51,15 @@
 }
 
 @end
+
+@implementation NSControl(objst_observing)
+
+-(void)objst_addObserver:anObserver forKey:aKey
+{
+    [NSNotificationCenter.defaultCenter addObserverForName:NSControlTextDidChangeNotification object:self queue:nil usingBlock:^(NSNotification *note) {
+        [anObserver didChange];
+    }];
+}
+
+@end
+
