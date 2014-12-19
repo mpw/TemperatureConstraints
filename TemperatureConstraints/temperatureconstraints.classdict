@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>methodDict</key>
+	<dict>
+		<key>AppDelegate</key>
+		<dict>
+			<key>classMethods</key>
+			<dict/>
+			<key>instanceMethods</key>
+			<dict>
+				<key>setupDeltablueConstraints</key>
+				<string>stdout println:'hello'.
+
+ivar:solver := DBSolver solver.
+
+stdout println:'got solver'.
+
+
+solver := ivar:solver.
+
+
+stdout println: ivar:celsiusTextField class.
+stdout println: solver.
+
+
+ivar:celsiusTextField/intValue := defaults:celsius.
+
+
+c2f := [  ivar:fahrenheitTextField/intValue := (9.0/5.0)* ivar:celsiusTextField/intValue + 32 ] constraintIn:solver.
+c2f add1ArgBlock:[ :farg | farg  -32 * 5.0/9.0  ].
+
+c2k := [  ivar:kelvinTextField/intValue :=  (ivar:celsiusTextField/intValue + 473)  ] constraintIn:solver.
+c2k add1ArgBlock:[ :karg | karg  - 473 . ].
+
+[ defaults:celsius := ivar:celsiusTextField/intValue ] constraintIn:solver.
+
+(c2f variableAtIndex:0) externalReference startObserving.
+(c2f variableAtIndex:1) externalReference startObserving.
+
+</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>uniqueID</key>
+	<string>A837AA22-77EE-4493-A0A5-381CB438A83C-4739-00001185822B1E68</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

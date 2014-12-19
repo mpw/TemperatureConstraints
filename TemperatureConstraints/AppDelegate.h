@@ -9,6 +9,11 @@
 #import <Cocoa/Cocoa.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
+{
+    IBOutlet NSTextField *celsiusTextField;
+    IBOutlet NSTextField *fahrenheitTextField;
+    IBOutlet NSTextField *kelvinTextField;
+}
 
 
 @end

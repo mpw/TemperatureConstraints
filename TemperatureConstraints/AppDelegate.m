@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <MethodServer/MethodServer.h>
+
 
 @interface AppDelegate ()
 
@@ -14,6 +16,10 @@
 @end
 
 @implementation AppDelegate
+
+- (void)applicationWillFinishLaunching:(NSNotification *)aNotification {
+    [[MethodServer alloc] initWithMethodDictName:@"temperatureconstraints"];
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
