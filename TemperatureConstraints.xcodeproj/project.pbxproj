@@ -14,6 +14,7 @@
 		1FEEC99519CEC6400052B9A0 /* TemperatureConstraintsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEC99419CEC6400052B9A0 /* TemperatureConstraintsTests.m */; };
 		1FEEC99F19CEC6CF0052B9A0 /* MethodServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FEEC99E19CEC6CF0052B9A0 /* MethodServer.framework */; };
 		1FF8036F1A44535A00B11DED /* temperatureconstraints.classdict in Resources */ = {isa = PBXBuildFile; fileRef = 1FF8036E1A44535A00B11DED /* temperatureconstraints.classdict */; };
+		1FF803721A445A7600B11DED /* DeltaBlue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF803701A4459C400B11DED /* DeltaBlue.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		1FEEC99419CEC6400052B9A0 /* TemperatureConstraintsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemperatureConstraintsTests.m; sourceTree = "<group>"; };
 		1FEEC99E19CEC6CF0052B9A0 /* MethodServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MethodServer.framework; path = ../../Build/Release/MethodServer.framework; sourceTree = "<group>"; };
 		1FF8036E1A44535A00B11DED /* temperatureconstraints.classdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = temperatureconstraints.classdict; sourceTree = "<group>"; };
+		1FF803701A4459C400B11DED /* DeltaBlue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeltaBlue.framework; path = ../../Build/Release/DeltaBlue.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF803721A445A7600B11DED /* DeltaBlue.framework in Frameworks */,
 				1FEEC99F19CEC6CF0052B9A0 /* MethodServer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +66,7 @@
 		1FEEC97219CEC6400052B9A0 = {
 			isa = PBXGroup;
 			children = (
+				1FF803701A4459C400B11DED /* DeltaBlue.framework */,
 				1FEEC99E19CEC6CF0052B9A0 /* MethodServer.framework */,
 				1FEEC97D19CEC6400052B9A0 /* TemperatureConstraints */,
 				1FEEC99119CEC6400052B9A0 /* TemperatureConstraintsTests */,
