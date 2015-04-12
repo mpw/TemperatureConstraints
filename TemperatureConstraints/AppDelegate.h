@@ -15,8 +15,14 @@
     IBOutlet NSTextField *celsiusTextField;
     IBOutlet NSTextField *fahrenheitTextField;
     IBOutlet NSTextField *kelvinTextField;
+    
+    IBOutlet NSTextField *userNameField;
+    IBOutlet NSTextField *passwordField;
+    IBOutlet NSTextField *repeatPasswordField;
+ 
+    IBOutlet NSButton    *loginButton;
     id solver;
-    id methodServer;
+    MethodServer         *methodServer;
 }
 
 

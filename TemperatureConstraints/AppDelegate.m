@@ -33,12 +33,14 @@ objectAccessor(MethodServer, methodServer, setMethodServer)
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification {
     [self setMethodServer:[[[MethodServer alloc] initWithMethodDictName:@"temperatureconstraints"] autorelease]];
-    [[self methodServer] setupWithoutStarting];
+    [[self methodServer] setupMethodServer];
     [[self interpreter] bindValue:self toVariableNamed:@"delegate"];
     [[self interpreter] evaluateScriptString:@"scheme:ivar := ref:var:delegate asScheme."];
     NSLog(@"will setupDeltablueConstraints");
     
     [self setupDeltablueConstraints];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(methodsDefined) name:@"methodsDefined" object:nil];
 }
 
 
@@ -48,6 +50,18 @@ objectAccessor(MethodServer, methodServer, setMethodServer)
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+}
+
+-(void)methodsDefined
+{
+    [self setupDeltablueConstraints];
+}
+
+-(id)isValidPassword:password withRepeat:repeatPassword
+{
+    id enabled=@([password isEqual:repeatPassword] && [password length] > 4);
+    NSLog(@"password: %@ repeatPassword: %@ enabled: %@",password,repeatPassword,enabled);
+    return enabled;
 }
 
 @end
