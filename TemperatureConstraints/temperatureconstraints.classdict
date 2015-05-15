@@ -11,20 +11,9 @@
 			<key>instanceMethods</key>
 			<dict>
 				<key>setupDeltablueConstraints</key>
-				<string>stdout println:'hello'.
-
+				<string>
 ivar:solver := DBSolver solver.
-
-stdout println:'got solver'.
-
-
 solver := ivar:solver.
-
-
-stdout println: ivar:celsiusTextField class.
-stdout println: solver.
-
-
 ivar:celsiusTextField/intValue := defaults:celsius.
 
 
@@ -36,14 +25,8 @@ c2k add1ArgBlock:[ :karg | karg  - 273  . ].
 
 [ defaults:celsius := ivar:celsiusTextField/intValue ] constraintIn:solver.
 
-(c2f variableAtIndex:0) externalReference startObserving.
-(c2f variableAtIndex:1) externalReference startObserving.
-(c2k variableAtIndex:0) externalReference startObserving.
-
 enabler := [ (ivar:loginButton/enabled) := (self  isValidPassword: ivar:passwordField/stringValue withRepeat:  ivar:repeatPasswordField/stringValue )] constraintIn:solver.
 
-(enabler variableAtIndex:1) externalReference startObserving.
-(enabler variableAtIndex:2) externalReference startObserving.
 
 </string>
 			</dict>
