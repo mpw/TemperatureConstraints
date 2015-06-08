@@ -61,12 +61,6 @@ objectAccessor(MethodServer, methodServer, setMethodServer)
     [self setupDeltablueConstraints];
 }
 
--(id)isValidPassword:password withRepeat:repeatPassword
-{
-    id enabled=@([password isEqual:repeatPassword] && [password length] > 4);
-    NSLog(@"password: %@ repeatPassword: %@ enabled: %@",password,repeatPassword,enabled);
-    return enabled;
-}
 
 @end
 

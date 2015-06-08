@@ -11,31 +11,29 @@
 			<key>instanceMethods</key>
 			<dict>
 				<key>isValidPassword:password withRepeat:repeatPassword</key>
-				<string> (password = repeatPassword)  and: ( password length &gt; 6 ).
+				<string>
+  (password isEqual:repeatPassword) and: (password length &gt; 4)
 </string>
 				<key>setupDeltablueConstraints</key>
-				<string>
-
-self setupTemperatureConverter.
-self setupLoginButtonPasswordChecker.
+				<string>self setupTemperatureConverter.
+self setupPasswordChecker.
 </string>
-				<key>setupLoginButtonPasswordChecker</key>
+				<key>setupPasswordChecker</key>
 				<string>
 ivar:loginButton/enabled |= self isValidPassword: ivar:passwordField/stringValue withRepeat: ivar:repeatPasswordField/stringValue .
 
 </string>
 				<key>setupTemperatureConverter</key>
-				<string>
-c2f :=   ivar:fahrenheitTextField/intValue |=  ((9.0/5.0)* ivar:celsiusTextField/intValue + 32) .
+				<string>c2f := ivar:fahrenheitTextField/intValue |= (9.0/5.0)* ivar:celsiusTextField/intValue + 32 .
 c2f add1ArgBlock:[ :f | (f - 32) * 5.0/9.0 ].
 
-c2k := (  ivar:kelvinTextField/intValue |=  (ivar:celsiusTextField/intValue + 273)  ).
+
+c2k := ivar:kelvinTextField/intValue |=  (ivar:celsiusTextField/intValue + 273).
 c2k add1ArgBlock:[ :karg | karg  - 273  . ].
 
 ivar:celsiusTextField/intValue := defaults:celsius.
 
-defaults:celsius |= ivar:celsiusTextField/intValue.
-
+defaults:celsius |= ivar:celsiusTextField/intValue
 </string>
 			</dict>
 		</dict>
