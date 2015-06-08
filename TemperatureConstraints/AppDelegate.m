@@ -34,11 +34,13 @@ objectAccessor(MethodServer, methodServer, setMethodServer)
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification {
     [self setMethodServer:[[[MethodServer alloc] initWithMethodDictName:@"temperatureconstraints"] autorelease]];
     [[self methodServer] setupMethodServer];
+    NSLog(@"interpreter: %@ solver: %@",[self interpreter],[[self interpreter] solver]);
     [[self interpreter] bindValue:self toVariableNamed:@"delegate"];
     [[self interpreter] evaluateScriptString:@"scheme:ivar := ref:var:delegate asScheme."];
     NSLog(@"will setupDeltablueConstraints");
+    NSLog(@"method: %@",[[[self interpreter] methodForClass:[self className] name:@"setupDeltablueConstraints"] script]);
     
-    [self setupDeltablueConstraints];
+    [self methodsDefined];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(methodsDefined) name:@"methodsDefined" object:nil];
 }
@@ -54,6 +56,8 @@ objectAccessor(MethodServer, methodServer, setMethodServer)
 
 -(void)methodsDefined
 {
+    [self setSolver:[NSClassFromString(@"DBSolver") solver]];
+    [[self interpreter] setSolver:[self solver]];
     [self setupDeltablueConstraints];
 }
 

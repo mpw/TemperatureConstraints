@@ -11,21 +11,10 @@
 		1FEEC98419CEC6400052B9A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEC98319CEC6400052B9A0 /* AppDelegate.m */; };
 		1FEEC98619CEC6400052B9A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FEEC98519CEC6400052B9A0 /* Images.xcassets */; };
 		1FEEC98919CEC6400052B9A0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FEEC98719CEC6400052B9A0 /* MainMenu.xib */; };
-		1FEEC99519CEC6400052B9A0 /* TemperatureConstraintsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEC99419CEC6400052B9A0 /* TemperatureConstraintsTests.m */; };
 		1FEEC99F19CEC6CF0052B9A0 /* MethodServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FEEC99E19CEC6CF0052B9A0 /* MethodServer.framework */; };
 		1FF8036F1A44535A00B11DED /* temperatureconstraints.classdict in Resources */ = {isa = PBXBuildFile; fileRef = 1FF8036E1A44535A00B11DED /* temperatureconstraints.classdict */; };
 		1FF803721A445A7600B11DED /* DeltaBlue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF803701A4459C400B11DED /* DeltaBlue.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1FEEC98F19CEC6400052B9A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1FEEC97319CEC6400052B9A0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1FEEC97A19CEC6400052B9A0;
-			remoteInfo = TemperatureConstraints;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1FEEC97B19CEC6400052B9A0 /* TemperatureConstraints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemperatureConstraints.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,9 +24,6 @@
 		1FEEC98319CEC6400052B9A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1FEEC98519CEC6400052B9A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1FEEC98819CEC6400052B9A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		1FEEC98E19CEC6400052B9A0 /* TemperatureConstraintsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemperatureConstraintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FEEC99319CEC6400052B9A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FEEC99419CEC6400052B9A0 /* TemperatureConstraintsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemperatureConstraintsTests.m; sourceTree = "<group>"; };
 		1FEEC99E19CEC6CF0052B9A0 /* MethodServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MethodServer.framework; path = ../../Build/Release/MethodServer.framework; sourceTree = "<group>"; };
 		1FF8036E1A44535A00B11DED /* temperatureconstraints.classdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = temperatureconstraints.classdict; sourceTree = "<group>"; };
 		1FF803701A4459C400B11DED /* DeltaBlue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeltaBlue.framework; path = ../../Build/Release/DeltaBlue.framework; sourceTree = "<group>"; };
@@ -53,13 +39,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FEEC98B19CEC6400052B9A0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,7 +48,6 @@
 				1FF803701A4459C400B11DED /* DeltaBlue.framework */,
 				1FEEC99E19CEC6CF0052B9A0 /* MethodServer.framework */,
 				1FEEC97D19CEC6400052B9A0 /* TemperatureConstraints */,
-				1FEEC99119CEC6400052B9A0 /* TemperatureConstraintsTests */,
 				1FEEC97C19CEC6400052B9A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				1FEEC97B19CEC6400052B9A0 /* TemperatureConstraints.app */,
-				1FEEC98E19CEC6400052B9A0 /* TemperatureConstraintsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,23 +82,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1FEEC99119CEC6400052B9A0 /* TemperatureConstraintsTests */ = {
-			isa = PBXGroup;
-			children = (
-				1FEEC99419CEC6400052B9A0 /* TemperatureConstraintsTests.m */,
-				1FEEC99219CEC6400052B9A0 /* Supporting Files */,
-			);
-			path = TemperatureConstraintsTests;
-			sourceTree = "<group>";
-		};
-		1FEEC99219CEC6400052B9A0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1FEEC99319CEC6400052B9A0 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,24 +102,6 @@
 			productReference = 1FEEC97B19CEC6400052B9A0 /* TemperatureConstraints.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1FEEC98D19CEC6400052B9A0 /* TemperatureConstraintsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1FEEC99B19CEC6400052B9A0 /* Build configuration list for PBXNativeTarget "TemperatureConstraintsTests" */;
-			buildPhases = (
-				1FEEC98A19CEC6400052B9A0 /* Sources */,
-				1FEEC98B19CEC6400052B9A0 /* Frameworks */,
-				1FEEC98C19CEC6400052B9A0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1FEEC99019CEC6400052B9A0 /* PBXTargetDependency */,
-			);
-			name = TemperatureConstraintsTests;
-			productName = TemperatureConstraintsTests;
-			productReference = 1FEEC98E19CEC6400052B9A0 /* TemperatureConstraintsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -171,10 +113,6 @@
 				TargetAttributes = {
 					1FEEC97A19CEC6400052B9A0 = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					1FEEC98D19CEC6400052B9A0 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 1FEEC97A19CEC6400052B9A0;
 					};
 				};
 			};
@@ -192,7 +130,6 @@
 			projectRoot = "";
 			targets = (
 				1FEEC97A19CEC6400052B9A0 /* TemperatureConstraints */,
-				1FEEC98D19CEC6400052B9A0 /* TemperatureConstraintsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -208,13 +145,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FEEC98C19CEC6400052B9A0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -227,23 +157,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FEEC98A19CEC6400052B9A0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1FEEC99519CEC6400052B9A0 /* TemperatureConstraintsTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1FEEC99019CEC6400052B9A0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1FEEC97A19CEC6400052B9A0 /* TemperatureConstraints */;
-			targetProxy = 1FEEC98F19CEC6400052B9A0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1FEEC98719CEC6400052B9A0 /* MainMenu.xib */ = {
@@ -365,42 +279,6 @@
 			};
 			name = Release;
 		};
-		1FEEC99C19CEC6400052B9A0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TemperatureConstraintsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TemperatureConstraints.app/Contents/MacOS/TemperatureConstraints";
-			};
-			name = Debug;
-		};
-		1FEEC99D19CEC6400052B9A0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TemperatureConstraintsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TemperatureConstraints.app/Contents/MacOS/TemperatureConstraints";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -418,15 +296,6 @@
 			buildConfigurations = (
 				1FEEC99919CEC6400052B9A0 /* Debug */,
 				1FEEC99A19CEC6400052B9A0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1FEEC99B19CEC6400052B9A0 /* Build configuration list for PBXNativeTarget "TemperatureConstraintsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1FEEC99C19CEC6400052B9A0 /* Debug */,
-				1FEEC99D19CEC6400052B9A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
