@@ -23,6 +23,8 @@
     IBOutlet NSButton    *loginButton;
     id solver;
     MethodServer         *methodServer;
+    
+    NSNumber  *c,*f,*k;
 }
 
 

@@ -24,6 +24,9 @@ objectAccessor(NSTextField, celsiusTextField, setCelsiusTextField )
 objectAccessor(NSTextField, fahrenheitTextField, setFahrenheitTextField )
 objectAccessor(NSTextField, kelvinTextField, setKelvinTextField )
 objectAccessor(MethodServer, methodServer, setMethodServer)
+objectAccessor(NSNumber, c, setC)
+objectAccessor(NSNumber, k, setK)
+objectAccessor(NSNumber, f, setF)
 
 -interpreter
 {
@@ -37,17 +40,19 @@ objectAccessor(MethodServer, methodServer, setMethodServer)
     NSLog(@"interpreter: %@ solver: %@",[self interpreter],[[self interpreter] solver]);
     [[self interpreter] bindValue:self toVariableNamed:@"delegate"];
     [[self interpreter] evaluateScriptString:@"scheme:ivar := ref:var:delegate asScheme."];
-    NSLog(@"will setupDeltablueConstraints");
-    NSLog(@"method: %@",[[[self interpreter] methodForClass:[self className] name:@"setupDeltablueConstraints"] script]);
-    
-    [self methodsDefined];
+    [self setC:@(0)];
+    [self setF:@(0)];
+    [self setK:@(0)];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(methodsDefined) name:@"methodsDefined" object:nil];
 }
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    NSLog(@"will setupDeltablueConstraints");
+    NSLog(@"method: %@",[[[self interpreter] methodForClass:[self className] name:@"setupDeltablueConstraints"] script]);
+    
+    [self methodsDefined];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
