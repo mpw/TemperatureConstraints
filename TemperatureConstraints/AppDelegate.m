@@ -24,9 +24,9 @@ objectAccessor(NSTextField, celsiusTextField, setCelsiusTextField )
 objectAccessor(NSTextField, fahrenheitTextField, setFahrenheitTextField )
 objectAccessor(NSTextField, kelvinTextField, setKelvinTextField )
 objectAccessor(MethodServer, methodServer, setMethodServer)
-objectAccessor(NSNumber, c, setC)
-objectAccessor(NSNumber, k, setK)
-objectAccessor(NSNumber, f, setF)
+intAccessor( c, setC)
+intAccessor( k, setK)
+intAccessor( f, setF)
 
 -interpreter
 {
@@ -40,9 +40,6 @@ objectAccessor(NSNumber, f, setF)
     NSLog(@"interpreter: %@ solver: %@",[self interpreter],[[self interpreter] solver]);
     [[self interpreter] bindValue:self toVariableNamed:@"delegate"];
     [[self interpreter] evaluateScriptString:@"scheme:ivar := ref:var:delegate asScheme."];
-    [self setC:@(0)];
-    [self setF:@(0)];
-    [self setK:@(0)];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(methodsDefined) name:@"methodsDefined" object:nil];
 }

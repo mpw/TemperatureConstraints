@@ -24,7 +24,8 @@
     id solver;
     MethodServer         *methodServer;
     
-    NSNumber  *c,*f,*k;
+//    NSNumber  *c,*f,*k;
+    int     c,f,k;
 }
 
 
