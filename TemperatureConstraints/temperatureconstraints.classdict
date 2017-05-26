@@ -14,32 +14,10 @@
 				<string>
   (password = repeatPassword) and: (password length &gt; 4)
 </string>
-				<key>setupDeltablueConstraints</key>
-				<string>self setupTemperatureConverter.
-self setupPasswordChecker.
-</string>
 				<key>setupPasswordChecker</key>
 				<string>
 ivar:loginButton/enabled |= self isValidPassword: ivar:passwordField/stringValue withRepeat: ivar:repeatPasswordField/stringValue .
 
-</string>
-				<key>setupTemperatureConverter</key>
-				<string>
-ivar:celsiusTextField/intValue    =|= ivar:c.
-ivar:fahrenheitTextField/intValue =|= ivar:f.
-ivar:kelvinTextField/intValue     =|= ivar:k.
-
-
-ivar:f |= (9.0/5.0) * ivar:c + 32 .
-ivar:c |= (ivar:f - 32) * (5.0/9.0). 
-ivar:k |= ivar:c + 273.
-ivar:c |= ivar:k - 273.
-
-ivar:c := defaults:celsius.
-
-defaults:celsius |= ivar:c.
-file:/tmp/celsius |= ivar:c stringValue.
-ivar:c |= file:/tmp/celsius stringValue intValue.
 </string>
 			</dict>
 		</dict>
